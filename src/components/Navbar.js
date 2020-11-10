@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 
+import styles from '../styles/Navbar.module.sass'
+
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -40,8 +42,8 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
+          <div className={styles.brand + " navbar-brand"}>
+            <Link to="/" className={styles.item + " navbar-item"} title="Logo">
               <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
             </Link>
             {/* Hamburger menu */}
@@ -57,29 +59,29 @@ const Navbar = class extends React.Component {
           </div>
           <div
             id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`navbar-menu ${this.state.navBarActiveClass} ${styles.menu}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
+              <Link className={styles.item + " navbar-item"} to="/about">
                 About
               </Link>
-              <Link className="navbar-item" to="/products">
+              <Link className={styles.item + " navbar-item"} to="/products">
                 Products
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link className={styles.item + " navbar-item"} to="/blog">
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className={styles.item + " navbar-item"} to="/contact">
                 Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
+              <Link className={styles.item + " navbar-item"} to="/contact/examples">
                 Form Examples
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
               <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                className={styles.item + " navbar-item"}
+                href="https://github.com/PeterMorrison1"
                 target="_blank"
                 rel="noopener noreferrer"
               >
