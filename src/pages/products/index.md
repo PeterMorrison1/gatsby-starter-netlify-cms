@@ -1,5 +1,5 @@
 ---
-subheading: Luxury in your home
+subheading: Luxury at Home
 heading: Great coffee with a conscience
 path: /products
 templateKey: product-page
