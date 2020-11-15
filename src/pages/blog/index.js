@@ -8,7 +8,7 @@ export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <PageHeader title={"Latest Stories"} body={"subheading"} image={`'/img/blog-index.jpg'`} />
+        <PageHeader title={"Latest Stories"} body={"Hear the latest coffee news here"} image={`'/img/blog-index.jpg'`} />
         <section className="section">
           <div className="container">
             <div className="content">

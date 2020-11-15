@@ -21,7 +21,7 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
     <div>
-      <PageHeader title={title} body={"subheading"} image={image} />
+      <PageHeader title={title} body={subheading} image={image} />
       <div className="content">
         <section className="section section--gradient">
           <div className="container">
