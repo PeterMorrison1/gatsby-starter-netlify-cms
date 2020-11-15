@@ -1,6 +1,6 @@
 ---
 subheading: Luxury at Home
-heading: Great coffee with a conscience
+heading: Great coffee with a conscience!
 path: /products
 templateKey: product-page
 title: Our Coffee
