@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
-
+import { getUser, isLoggedIn, logout } from '../services/auth'
 import styles from '../styles/Navbar.module.sass'
 
 const Navbar = class extends React.Component {
@@ -25,11 +25,11 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
+            navBarActiveClass: 'is-active',
+          })
           : this.setState({
-              navBarActiveClass: '',
-            })
+            navBarActiveClass: '',
+          })
       }
     )
   }
@@ -79,6 +79,23 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
+              {isLoggedIn() ? (
+                <div>
+                  <Link className={styles.item + " navbar-item"} to="/app/profile">
+                    My Profile
+                  </Link>
+                  <a href='/' onClick={event => {
+                    event.preventDefault()
+                    logout(() => navigate('/app/login'))
+                  }}>Logout</a>
+                </div>
+              ) :
+                <div>
+                  <Link className={styles.item + " navbar-item"} to="/app/login">
+                    Login
+                  </Link>
+                </div>
+              }
               <a
                 className={styles.item + " navbar-item"}
                 href="https://github.com/PeterMorrison1"
