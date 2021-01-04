@@ -1,3 +1,15 @@
+# My Gatsby + CMS Website Starter
+I have forked this starter from the Netlify team to quickly create websites using React, Gatsby, and the Netlify CMS.
+
+## Changes from the original starter
+* Created modular sass files for styling as opposed to the one large style sheet. This is for easier editing and reading, but for faster building as the one large file would require rebuilding the entire website for any style change. The modular version only changes pages that have dependencies on the editted style sheet.
+* Added a skeleton of a login system if needed in projects
+
+## To Create a Website from this Template
+* Fork the project on Github
+* Create the website on Netlify using the forked project
+Note: The buttons below for hosting on netlify do not work, I have not yet editted the remainder of the README
+
 # Gatsby + Netlify CMS Starter
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
